@@ -1,0 +1,119 @@
+*{
+    margin: 0;
+    box-sizing: border-box;
+}
+.title {
+    color: white;
+    text-align: center;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+  }
+  .underline {
+    width: 35rem;
+    height: 0.15rem;
+    background: yellow;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 1rem;
+    margin-top: 1rem;
+  }
+.gallery {
+    width: 100%;
+    display: flex;
+    min-height: 100vh;
+    background-color: black;
+}
+
+.container {
+    max-width: 90vw;
+    margin: auto;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.Row {
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    justify-content: center;
+    align-items: center;
+}
+
+.gallery .filters {
+    padding: 5px;
+    width: 100%;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.gallery .filters .filter-item {
+    color: white;
+    text-transform: none;
+    font-size: 16px;
+    display: inline-block;
+    margin: 10px;
+    padding: 7px 20px;
+    font-family: raleway;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border: 1px solid white;
+}
+
+.gallery .filters .filter-item.active {
+    color: yellow;
+}
+
+.gallery .gallery-item {
+    /*width: calc(100% / 3);*/
+    padding: 15px;
+}
+/*
+.gallery .gallery-item img {
+    width: 100%;
+}
+*/
+/* for simple fadein animation on clicking filters used in javascript code*/
+.gallery .gallery-item.show {
+    animation:fadein 0.5s ease;
+}
+
+.gallery .gallery-item.hide {
+    display: none;
+}
+
+@keyframes fadein {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@media screen and (max-width: 2000px) {
+    .Row {
+      grid-template-columns: auto auto auto;
+      gap: 0 1.25rem;
+    
+    }
+  }
+
+  @media screen and (max-width: 1400px) {
+    .Row {
+      grid-template-columns: auto auto;
+      gap: 0 1.25rem;
+      
+    }
+  }
+
+  @media screen and (max-width: 800px) {
+    .Row {
+      grid-template-columns: auto;
+      gap: 0 1.25rem;
+      
+    }
+  }
+
+  
